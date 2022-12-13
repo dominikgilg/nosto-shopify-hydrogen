@@ -16,6 +16,7 @@ import {
 import {HeaderFallback, EventsListener} from '~/components';
 import {NotFound} from '~/components/index.server';
 import NostoComponent from '~/components/NostoComponents.client';
+import {NostoPlacement} from '@nosto/nosto-react';
 
 function App({request}) {
   const pathname = new URL(request.normalizedUrl).pathname;
@@ -56,6 +57,7 @@ function App({request}) {
               />
               <Route path="*" page={<NotFound />} />
             </NostoComponent>
+            <NostoPlacement id="dom-test"></NostoPlacement>
           </Router>
         </CartProvider>
         <PerformanceMetrics />
