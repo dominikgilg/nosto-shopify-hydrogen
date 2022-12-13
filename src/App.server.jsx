@@ -55,7 +55,7 @@ function App({request}) {
                 basePath={countryCode ? `/${countryCode}/` : undefined}
               />
               <Route path="*" page={<NotFound />} />
-            </NostoProvider>
+            </NostoComponent>
           </Router>
         </CartProvider>
         <PerformanceMetrics />
