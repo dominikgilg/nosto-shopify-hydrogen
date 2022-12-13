@@ -50,12 +50,12 @@ function App({request}) {
           customerAccessToken={customerAccessToken}
         >
           <Router>
-            {/* <NostoProvider account="shopify-55957520471"> */}
-            <FileRoutes
-              basePath={countryCode ? `/${countryCode}/` : undefined}
-            />
-            <Route path="*" page={<NotFound />} />
-            {/* </NostoProvider> */}
+            <NostoProvider account="shopify-55957520471">
+              <FileRoutes
+                basePath={countryCode ? `/${countryCode}/` : undefined}
+              />
+              <Route path="*" page={<NotFound />} />
+            </NostoProvider>
           </Router>
         </CartProvider>
         <PerformanceMetrics />
