@@ -16,7 +16,7 @@ import {
 import {HeaderFallback, EventsListener} from '~/components';
 import {NotFound} from '~/components/index.server';
 
-import {Test} from 'vite-lib';
+import {Test} from '@nosto/nosto-react';
 
 function App({request}) {
   const pathname = new URL(request.normalizedUrl).pathname;
