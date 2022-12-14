@@ -15,7 +15,7 @@ import {
 } from '@shopify/hydrogen';
 import {HeaderFallback, EventsListener} from '~/components';
 import {NotFound} from '~/components/index.server';
-import {NostoTest} from '@nosto/nosto-react';
+import {NostoProvider} from '@nosto/nosto-react';
 
 function App({request}) {
   const pathname = new URL(request.normalizedUrl).pathname;
@@ -50,12 +50,12 @@ function App({request}) {
           customerAccessToken={customerAccessToken}
         >
           <Router>
-            <NostoTest>
+            <NostoProvider>
               <FileRoutes
                 basePath={countryCode ? `/${countryCode}/` : undefined}
               />
               <Route path="*" page={<NotFound />} />
-            </NostoTest>
+            </NostoProvider>
           </Router>
         </CartProvider>
         <PerformanceMetrics />
