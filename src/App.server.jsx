@@ -15,7 +15,7 @@ import {
 } from '@shopify/hydrogen';
 import {HeaderFallback, EventsListener} from '~/components';
 import {NotFound} from '~/components/index.server';
-import {NostoComponent} from '@nosto/nosto-hydrogen';
+import {NostoTest} from '@nosto/nosto-react';
 
 function App({request}) {
   const pathname = new URL(request.normalizedUrl).pathname;
@@ -49,14 +49,13 @@ function App({request}) {
           countryCode={countryCode}
           customerAccessToken={customerAccessToken}
         >
-          <NostoComponent type="NostoPlacement" id="domi-tet"></NostoComponent>
           <Router>
-            <NostoComponent type="NostoProvider" account="shopify-55957520471">
+            <NostoTest>
               <FileRoutes
                 basePath={countryCode ? `/${countryCode}/` : undefined}
               />
               <Route path="*" page={<NotFound />} />
-            </NostoComponent>
+            </NostoTest>
           </Router>
         </CartProvider>
         <PerformanceMetrics />
