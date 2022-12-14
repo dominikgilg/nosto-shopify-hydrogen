@@ -15,7 +15,8 @@ import {
 } from '@shopify/hydrogen';
 import {HeaderFallback, EventsListener} from '~/components';
 import {NotFound} from '~/components/index.server';
-import {NostoProvider} from '@nosto/nosto-react';
+
+import {Test} from 'vite-lib';
 
 function App({request}) {
   const pathname = new URL(request.normalizedUrl).pathname;
@@ -45,17 +46,16 @@ function App({request}) {
             titleTemplate: `%s · Hydrogen`,
           }}
         />
+        <Test>Hallo</Test>
         <CartProvider
           countryCode={countryCode}
           customerAccessToken={customerAccessToken}
         >
           <Router>
-            <NostoProvider>
-              <FileRoutes
-                basePath={countryCode ? `/${countryCode}/` : undefined}
-              />
-              <Route path="*" page={<NotFound />} />
-            </NostoProvider>
+            <FileRoutes
+              basePath={countryCode ? `/${countryCode}/` : undefined}
+            />
+            <Route path="*" page={<NotFound />} />
           </Router>
         </CartProvider>
         <PerformanceMetrics />
