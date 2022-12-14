@@ -49,6 +49,7 @@ function App({request}) {
           countryCode={countryCode}
           customerAccessToken={customerAccessToken}
         >
+          <NostoComponent type="NostoPlacement" id="domi-tet"></NostoComponent>
           <Router>
             <NostoComponent type="NostoProvider" account="shopify-55957520471">
               <FileRoutes
