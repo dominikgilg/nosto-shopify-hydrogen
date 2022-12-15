@@ -16,7 +16,7 @@ import {
 import {HeaderFallback, EventsListener} from '~/components';
 import {NotFound} from '~/components/index.server';
 
-import {Test} from '@nosto/nosto-react';
+import {Test} from '@nosto/lib-test';
 
 function App({request}) {
   const pathname = new URL(request.normalizedUrl).pathname;

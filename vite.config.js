@@ -13,10 +13,10 @@ export default defineConfig({
       'clsx',
       'react-use',
       'typographic-base',
-      '@nosto/nosto-react',
+      '@nosto/lib-test',
     ],
   },
-  ssr: {noExternal: ['@nosto/nosto-react']},
+  ssr: {noExternal: ['@nosto/lib-test']},
   test: {
     globals: true,
     testTimeout: 10000,
