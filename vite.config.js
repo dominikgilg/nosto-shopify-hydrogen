@@ -14,10 +14,11 @@ export default defineConfig({
       'react-use',
       'typographic-base',
       '@nosto/lib-test',
+      '@nosto/nosto-react',
     ],
     exclude: [],
   },
-  ssr: {noExternal: ['@nosto/lib-test']},
+  ssr: {noExternal: ['@nosto/lib-test', '@nosto/nosto-react']},
   test: {
     globals: true,
     testTimeout: 10000,
