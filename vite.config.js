@@ -14,9 +14,8 @@ export default defineConfig({
       'react-use',
       'typographic-base',
       '@nosto/lib-test',
-      '@nosto/nosto-react',
     ],
-    exclude: [],
+    exclude: ['@nosto/nosto-react'],
   },
   ssr: {noExternal: ['@nosto/lib-test', '@nosto/nosto-react']},
   test: {
