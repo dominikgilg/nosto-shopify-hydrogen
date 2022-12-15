@@ -767,7 +767,7 @@
 
 "@nosto/lib-test@github:dominikgilg/mylib":
   version "0.0.0"
-  resolved "https://codeload.github.com/dominikgilg/mylib/tar.gz/ce7726912478cbf5d65368e32b15cea7e6778501"
+  resolved "https://codeload.github.com/dominikgilg/mylib/tar.gz/2805c108d6e61a1de8b1159a562c6e2b105e656b"
   dependencies:
     "@vitejs/plugin-react" "^3.0.0"
     vite "^4.0.0"
