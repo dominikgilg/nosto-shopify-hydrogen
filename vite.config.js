@@ -8,16 +8,10 @@ export default defineConfig({
     alias: [{find: /^~\/(.*)/, replacement: '/src/$1'}],
   },
   optimizeDeps: {
-    include: [
-      '@headlessui/react',
-      'clsx',
-      'react-use',
-      'typographic-base',
-      '@nosto/lib-test',
-    ],
-    exclude: ['@nosto/nosto-react'],
+    include: ['@headlessui/react', 'clsx', 'react-use', 'typographic-base'],
+    exclude: ['@nosto/lib-test'],
   },
-  ssr: {noExternal: ['@nosto/lib-test', '@nosto/nosto-react']},
+  ssr: {noExternal: ['@nosto/lib-test']},
   test: {
     globals: true,
     testTimeout: 10000,
